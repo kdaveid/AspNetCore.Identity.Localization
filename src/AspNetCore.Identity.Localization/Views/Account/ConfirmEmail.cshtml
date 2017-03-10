@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = Localizer["Title"];
+}
+
+<h2>@ViewData["Title"].</h2>
+<div>
+    <p>
+        @Localizer["Message"]<a asp-controller="Account" asp-action="Login">@Localizer["MessageLink"]</a>.
+    </p>
+</div>
