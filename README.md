@@ -76,10 +76,16 @@ As configured in Startup.cs MVC expects the resource files to be in the folder `
 ```
 Resources
 |
-|--Controllers (convention: fix, for Controller Localization)
-|       HomeController.{culture}.resx
-|       OtherController.{culture}.resx
+|--Controllers 
+|       HomeController.{culture}.resx   (controller, which is not in any area)
+|       OtherController.{culture}.resx  (controller, which is not in any area)
 |       ...
+|       Admin.Controllers.HomeController.{culture}.resx (controller in area Admin but resolving via namespace)
+|       _or in folders but following the namespaces_
+|       Admin
+|       |
+|       |--Controllers
+|                 HomeController.{culture}.resx
 |
 |--Models (convention: namespace, depending on the namespace of your models!!)
 |   |
