@@ -59,7 +59,7 @@ namespace AspNetCore.Identity.Localization
 
             // --------- LOCALIZATION ----------
             // This is the part added to the template
-            services.AddLocalization(s => s.ResourcesPath = "Resources");
+            
             var supportedCultures = new CultureInfo[]
             {
                 new CultureInfo("de-CH"),
