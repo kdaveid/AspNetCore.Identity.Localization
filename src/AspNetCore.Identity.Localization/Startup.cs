@@ -25,7 +25,7 @@ namespace AspNetCore.Identity.Localization
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
             if (env.IsDevelopment())
@@ -59,7 +59,7 @@ namespace AspNetCore.Identity.Localization
 
             // --------- LOCALIZATION ----------
             // This is the part added to the template
-            services.AddLocalization(s => s.ResourcesPath = "Resources");
+            
             var supportedCultures = new CultureInfo[]
             {
                 new CultureInfo("de-CH"),
@@ -108,6 +108,11 @@ namespace AspNetCore.Identity.Localization
 
             app.UseMvc(routes =>
             {
+                routes.MapAreaRoute(
+                    name: "admin-route",
+                    areaName: "admin",
+                    template: "admin/{controller=Home}/{action=Index}/{id?}");
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
