@@ -124,10 +124,10 @@
     <value>Passwort</value>
   </data>
   <data name="The Password field is required." xml:space="preserve">
-    <value>Das Passwortfeld ist ein Pflichtfeld</value>
+    <value>Das Passwortfeld ist ein Pflichtfeld.</value>
   </data>
   <data name="The Email field is required." xml:space="preserve">
-    <value>Das Emailfeld ist ein Pflichtfeld</value>
+    <value>Das Emailfeld ist ein Pflichtfeld.</value>
   </data>
   <data name="Confirm password" xml:space="preserve">
     <value>Passwortbestätigung</value>
@@ -140,5 +140,14 @@
   </data>
   <data name="The Email field is not a valid e-mail address." xml:space="preserve">
     <value>Das Emailfeld ist keine gültige Emailadresse.</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="The Username field is required." xml:space="preserve">
+    <value>Das Benutzernamefeld ist ein Pflichtfeld.</value>
+  </data>
+  <data name="The Username contains invalid characters." xml:space="preserve">
+    <value>Der Benutername enthält ungültige Zeichen.</value>
   </data>
 </root>

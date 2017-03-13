@@ -70,7 +70,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 }
 ```
 
-### Folder structure
+### Folder Structure
 
 As configured in Startup.cs MVC expects the resource files to be in the folder `Resources` with the following structure
 ```
@@ -105,7 +105,7 @@ Resources
 ...
 ```
 
-### Controller localization
+### Controller Localization
 
 You may inject then a `IStringLocalizer<...>` into for example the `HomeController` to use it.
 
@@ -129,11 +129,28 @@ public class HomeController : Controller
 
 The injected StringLocalizer looks in the path declared in `Startup.cs` for a resource file named `HomeController.{culture}.resx`. 
 
-### Edit the resource files
+### View Localization
+In order for view localization to work you have to inject a IViewLocalizer. The easiest way is to add it to `_ViewImports.cshtml`:
+```
+@using AspNetCore.Identity.Localization
+@using AspNetCore.Identity.Localization.Models
+@using AspNetCore.Identity.Localization.Models.AccountViewModels
+@using AspNetCore.Identity.Localization.Models.ManageViewModels
+@using Microsoft.AspNetCore.Identity
+
+@*Adding Localization*@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+```
+
+### Edit the Resource Files
 
 When working with resource files `.resx` I strongly reccommend the `ResX Resource Manager` plugin for Visual Studio from Tom Englert. You find it in the [Market Place](https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager).
 
-### How to contribute
+### How to Contribute
 
 Feel free to add additional languages. :)
 For details see [contributing](./CONTRIBUTING.md).

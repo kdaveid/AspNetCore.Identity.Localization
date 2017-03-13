@@ -121,4 +121,13 @@
   <data name="The Email field is not a valid e-mail address." xml:space="preserve">
     <value>The Email field is not a valid e-mail address.</value>
   <comment>The Email field is not a valid e-mail address.</comment></data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  <comment>Username</comment></data>
+  <data name="The Username field is required." xml:space="preserve">
+    <value>The Username field is required.</value>
+  <comment>The Username field is required.</comment></data>
+  <data name="The Username contains invalid characters." xml:space="preserve">
+    <value>The Username contains invalid characters.</value>
+  <comment>The Username contains invalid characters.</comment></data>
 </root>

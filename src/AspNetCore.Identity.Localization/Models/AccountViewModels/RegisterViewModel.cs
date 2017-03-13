@@ -8,6 +8,11 @@ namespace AspNetCore.Identity.Localization.Models.AccountViewModels
 {
     public class RegisterViewModel
     {
+        [Required(ErrorMessage = "The Username field is required.")]
+        [RegularExpression(@"^(?=[a-zA-Z])[-\w.]{0,23}([a-zA-Z\d]|(?<![-.])_)$", ErrorMessage ="The Username contains invalid characters.")]
+        [Display(Name = "Username")]
+        public string Username { get; set; }
+
         [Required(ErrorMessage = "The Email field is required.")]
         [EmailAddress(ErrorMessage = "The Email field is not a valid e-mail address.")]
         [Display(Name = "Email")]
